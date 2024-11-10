@@ -1,29 +1,45 @@
-.whatsapp-preview {
-  background-color: #e5ddd5;
-  padding: 15px;
+/* General container layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-.message-bubble {
-  max-width: 80%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 8px;
-  position: relative;
+/* Input panel styles */
+.input-panel {
+    width: 40%;
+    padding: 10px;
 }
 
-.sender {
-  background-color: #dcf8c6;
-  margin-left: auto;
-  text-align: right;
+.input-panel input, .input-panel textarea {
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px;
 }
 
-.message {
-  font-size: 15px;
-  color: #111;
+/* Phone frame */
+.phone-preview {
+    width: 360px;
+    height: 640px;
+    background-color: #e5ddd5; /* WhatsApp color */
+    border-radius: 30px;
+    position: relative;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.time {
-  font-size: 12px;
-  color: gray;
-  margin-top: 5px;
+/* Status bar */
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+    padding: 10px;
+}
+
+.message-preview {
+    background-color: #dcf8c6;
+    margin: 20px 0;
+    padding: 8px 12px;
+    border-radius: 8px;
 }
