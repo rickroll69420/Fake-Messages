@@ -1,54 +1,84 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+/* General container layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
-.app-selection img {
-  width: 100px;
-  margin: 10px;
+/* Input panel styles */
+.input-panel {
+    width: 40%;
+    padding: 10px;
 }
 
-.editor {
-  margin: 20px;
-  display: inline-block;
-  text-align: left;
+.input-panel input, .input-panel textarea, .input-panel select {
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px;
+    font-size: 14px;
 }
 
-.preview {
-  margin-top: 20px;
-  border: 1px solid #ddd;
-  padding: 20px;
-  display: inline-block;
+/* Phone frame for both iPhone and Android */
+.phone-preview {
+    width: 360px;
+    height: 640px;
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    position: relative;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
 
-#whatsappPreview {
-  width: 300px;
-  height: 500px;
-  background: #e5ddd5;
-  padding: 15px;
-  position: relative;
-  border-radius: 20px;
+/* Status bar styles */
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 5px 10px;
+    color: #333;
 }
 
-.whatsapp.android .message-bubble {
-  background: #dcf8c6;
+.icons img {
+    width: 15px;
+    height: 15px;
 }
 
-.whatsapp.iphone .message-bubble {
-  background: #d1e7ff;
+/* Message preview for WhatsApp, iMessage, etc. */
+.message-preview {
+    background-color: #dcf8c6;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
 }
 
-.message-bubble {
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
+/* iPhone-specific styles */
+.iphone .status-bar {
+    color: #666;
+    font-weight: 500;
 }
 
-.sender {
-  font-weight: bold;
+.iphone .battery-icon {
+    display: inline;
 }
 
-.time {
-  font-size: 0.8em;
-  color: gray;
+.iphone .signal-icon {
+    display: inline;
+}
+
+/* Android-specific styles */
+.android .status-bar {
+    background-color: #000;
+    color: #fff;
+    font-weight: normal;
+}
+
+.android .battery-icon {
+    display: inline;
+}
+
+.android .signal-icon {
+    display: inline;
 }
