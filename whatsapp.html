@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>WhatsApp Fake Message Generator</title>
+</head>
+<body>
+  <h1>Customize WhatsApp Message</h1>
+  <div class="editor">
+    <label>Sender Name</label>
+    <input id="senderName" type="text" placeholder="Enter sender name">
+    
+    <label>Message Content</label>
+    <textarea id="messageContent" placeholder="Type message here..."></textarea>
+    
+    <label>Time</label>
+    <input id="messageTime" type="text" placeholder="e.g., 12:34 PM">
+    
+    <label>Device Type</label>
+    <select id="deviceType">
+      <option value="android">Android</option>
+      <option value="iphone">iPhone</option>
+    </select>
+  </div>
+  
+  <div class="preview">
+    <h2>Live Preview</h2>
+    <div id="whatsappPreview" class="whatsapp android">
+      <!-- Preview content will be dynamically updated by JS -->
+      <div class="message-bubble">
+        <span class="sender" id="previewSender"></span>
+        <p class="message" id="previewMessage"></p>
+        <span class="time" id="previewTime"></span>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/common.js"></script>
+  <script src="js/whatsapp.js"></script>
+</body>
+</html>
