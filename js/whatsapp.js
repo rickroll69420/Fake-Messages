@@ -1,23 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const senderInput = document.getElementById('senderName');
-  const messageInput = document.getElementById('messageContent');
-  const timeInput = document.getElementById('messageTime');
-  
-  const previewSender = document.getElementById('previewSender');
-  const previewMessage = document.getElementById('previewMessage');
-  const previewTime = document.getElementById('previewTime');
-  const timeDisplay = document.getElementById('timeDisplay');
+    const usernameInput = document.getElementById('username');
+    const messageInput = document.getElementById('message');
+    const timeInput = document.getElementById('time');
+    const batteryInput = document.getElementById('battery');
 
-  senderInput.addEventListener('input', () => {
-    previewSender.textContent = senderInput.value;
-  });
-  
-  messageInput.addEventListener('input', () => {
-    previewMessage.textContent = messageInput.value;
-  });
-  
-  timeInput.addEventListener('input', () => {
-    previewTime.textContent = timeInput.value;
-    timeDisplay.textContent = timeInput.value;  // updates time in status bar too
-  });
+    const displayUsername = document.getElementById('display-username');
+    const displayMessage = document.getElementById('display-message');
+    const displayMessageTime = document.getElementById('display-message-time');
+    const displayTime = document.getElementById('display-time');
+    const batteryIcon = document.getElementById('battery-icon');
+
+    function updatePreview() {
+        displayUsername.textContent = usernameInput.value || 'John Doe';
+        displayMessage.textContent = messageInput.value || 'Hello! How are you?';
+        displayMessageTime.textContent = timeInput.value || '12:34 PM';
+        displayTime.textContent = timeInput.value || '12:34';
+        
+        const batteryLevel = batteryInput.value || 85;
+        batteryIcon.src = `img/icons/battery_${batteryLevel}.png`;
+    }
+
+    document.getElementById('generate').addEventListener('click', updatePreview);
 });
