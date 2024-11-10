@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.app-selection img {
+  width: 100px;
+  margin: 10px;
+}
+
+.editor {
+  margin: 20px;
+  display: inline-block;
+  text-align: left;
+}
+
+.preview {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  display: inline-block;
+}
+
+#whatsappPreview {
+  width: 300px;
+  height: 500px;
+  background: #e5ddd5;
+  padding: 15px;
+  position: relative;
+  border-radius: 20px;
+}
+
+.whatsapp.android .message-bubble {
+  background: #dcf8c6;
+}
+
+.whatsapp.iphone .message-bubble {
+  background: #d1e7ff;
+}
+
+.message-bubble {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.sender {
+  font-weight: bold;
+}
+
+.time {
+  font-size: 0.8em;
+  color: gray;
+}
