@@ -5,40 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/phone-frame.css">
-  <link rel="stylesheet" href="css/whatsapp.css">
-  <title>WhatsApp Fake Message</title>
+  <link rel="stylesheet" href="css/whatsapp.css"> <!-- Change for each app -->
+  <title>Fake WhatsApp Message Generator</title>
 </head>
 <body>
-  <h1>Customize WhatsApp Message</h1>
-  <div class="editor">
-    <label>Sender Name</label>
-    <input id="senderName" type="text" placeholder="Enter sender name">
-    <label>Message Content</label>
-    <textarea id="messageContent" placeholder="Type message here..."></textarea>
-    <label>Time</label>
-    <input id="messageTime" type="text" placeholder="e.g., 12:34 PM">
-  </div>
-  
-  <div class="phone-frame">
-    <div class="status-bar">
-      <span id="timeDisplay">12:30</span>
-      <div>
-        <img src="img/icons/signal.png" alt="Signal">
-        <img src="img/icons/wifi.png" alt="WiFi">
-        <img src="img/icons/battery.png" alt="Battery">
+  <div class="container">
+    <aside class="controls">
+      <h1>WhatsApp Message Customization</h1>
+      <label>Sender Name</label>
+      <input id="senderName" type="text" placeholder="Enter sender name">
+      <label>Message</label>
+      <textarea id="messageContent" placeholder="Type your message..."></textarea>
+      <label>Time</label>
+      <input id="messageTime" type="text" placeholder="12:34 PM">
+      <label>Battery Level</label>
+      <input id="batteryLevel" type="number" placeholder="e.g., 85">
+      <button id="generateButton">Generate</button>
+    </aside>
+
+    <section class="phone-frame">
+      <div class="status-bar">
+        <span id="timeDisplay">12:34</span>
+        <div>
+          <img src="img/icons/signal.png" alt="Signal">
+          <img src="img/icons/wifi.png" alt="WiFi">
+          <img src="img/icons/battery.png" alt="Battery">
+        </div>
       </div>
-    </div>
-    
-    <div class="whatsapp-preview">
-      <div class="message-bubble sender">
-        <span class="sender-name" id="previewSender">John Doe</span>
-        <p class="message" id="previewMessage">Hello, how are you?</p>
-        <span class="time" id="previewTime">12:30 PM</span>
+      <div class="app-preview">
+        <div class="message-bubble sender">
+          <span id="previewSender">John Doe</span>
+          <p id="previewMessage">This is a sample message</p>
+          <span id="previewTime">12:34 PM</span>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
-  
+
   <script src="js/common.js"></script>
-  <script src="js/whatsapp.js"></script>
+  <script src="js/whatsapp.js"></script> <!-- Change for each app -->
 </body>
 </html>
