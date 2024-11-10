@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake WhatsApp Generator</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/whatsapp.css"> <!-- Change for each app -->
+    <link rel="stylesheet" href="css/whatsapp.css">
 </head>
 <body>
     <div class="container">
         <!-- Input Section -->
         <div class="input-panel">
             <h2>Create Fake WhatsApp Message</h2>
+            
+            <!-- Device Selector -->
+            <label for="device">Device:</label>
+            <select id="device" onchange="switchDevice()">
+                <option value="iphone">iPhone</option>
+                <option value="android">Android</option>
+            </select>
+            
             <label for="username">Name:</label>
             <input id="username" type="text" placeholder="Enter name">
             
@@ -23,18 +31,18 @@
             
             <label for="battery">Battery Level:</label>
             <input id="battery" type="number" placeholder="e.g., 85">
-            
+
             <button id="generate">Update Preview</button>
         </div>
 
         <!-- Phone Preview Section -->
-        <div class="phone-preview">
+        <div class="phone-preview iphone" id="phone-preview">
             <div class="status-bar">
                 <span id="display-time">12:34</span>
                 <div class="icons">
-                    <img src="img/icons/signal.png" alt="Signal">
+                    <img src="img/icons/signal.png" alt="Signal" class="signal-icon">
                     <img src="img/icons/wifi.png" alt="WiFi">
-                    <img src="img/icons/battery.png" id="battery-icon" alt="Battery">
+                    <img src="img/icons/battery.png" id="battery-icon" class="battery-icon" alt="Battery">
                 </div>
             </div>
             <div class="message-preview">
@@ -48,6 +56,6 @@
     </div>
 
     <script src="js/common.js"></script>
-    <script src="js/whatsapp.js"></script> <!-- Change for each app -->
+    <script src="js/whatsapp.js"></script>
 </body>
 </html>
